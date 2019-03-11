@@ -13,7 +13,7 @@
 		4064538F223621EF0061B130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4064538D223621EF0061B130 /* LaunchScreen.storyboard */; };
 		40645397223624FC0061B130 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40645396223624FC0061B130 /* DetailVC.swift */; };
 		40645399223629BC0061B130 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40645398223629BC0061B130 /* ListVC.swift */; };
-		4064539B223634B80061B130 /* PageVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4064539A223634B80061B130 /* PageVCViewController.swift */; };
+		4064539B223634B80061B130 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4064539A223634B80061B130 /* PageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		40645390223621EF0061B130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40645396223624FC0061B130 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		40645398223629BC0061B130 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
-		4064539A223634B80061B130 /* PageVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVCViewController.swift; sourceTree = "<group>"; };
+		4064539A223634B80061B130 /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				40645384223621ED0061B130 /* AppDelegate.swift */,
-				4064539A223634B80061B130 /* PageVCViewController.swift */,
+				4064539A223634B80061B130 /* PageVC.swift */,
 				40645396223624FC0061B130 /* DetailVC.swift */,
 				40645398223629BC0061B130 /* ListVC.swift */,
 				40645388223621ED0061B130 /* Main.storyboard */,
@@ -143,7 +143,7 @@
 			files = (
 				40645399223629BC0061B130 /* ListVC.swift in Sources */,
 				40645385223621ED0061B130 /* AppDelegate.swift in Sources */,
-				4064539B223634B80061B130 /* PageVCViewController.swift in Sources */,
+				4064539B223634B80061B130 /* PageVC.swift in Sources */,
 				40645397223624FC0061B130 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
