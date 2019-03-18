@@ -42,7 +42,8 @@ class DetailVC: UIViewController {
         locationLabel.text = locationsArray[currentPage].name
         dateLabel.text = locationsArray[currentPage].coordinates
         temperatureLabel.text = locationsArray[currentPage].currentTemperature
-        print("%%%%% currentTemperature inside updateUserInterface() = \(locationsArray[currentPage].currentTemperature)")
+        summaryLabel.text = locationsArray[currentPage].currentSummary
+        currentImage.image = UIImage(named: locationsArray[currentPage].currentIcon)
     }
 }
 extension DetailVC: CLLocationManagerDelegate {
