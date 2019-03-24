@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		402D539222482D6900E3E968 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402D539122482D6900E3E968 /* TableViewCell.swift */; };
+		402D539622483FC300E3E968 /* TimeInterval+format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402D539522483FC300E3E968 /* TimeInterval+format.swift */; };
 		40645385223621ED0061B130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40645384223621ED0061B130 /* AppDelegate.swift */; };
 		4064538A223621ED0061B130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40645388223621ED0061B130 /* Main.storyboard */; };
 		4064538C223621EF0061B130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4064538B223621EF0061B130 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		402D539122482D6900E3E968 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		402D539522483FC300E3E968 /* TimeInterval+format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+format.swift"; sourceTree = "<group>"; };
 		40645381223621ED0061B130 /* WeatherGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40645384223621ED0061B130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40645389223621ED0061B130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				4064539C223C3BAD0061B130 /* WeatherLocation.swift */,
 				40645396223624FC0061B130 /* DetailVC.swift */,
 				402D539122482D6900E3E968 /* TableViewCell.swift */,
+				402D539522483FC300E3E968 /* TimeInterval+format.swift */,
 				40645398223629BC0061B130 /* ListVC.swift */,
 				406453C0223EEA7A0061B130 /* Constants.swift */,
 				40645388223621ED0061B130 /* Main.storyboard */,
@@ -252,6 +255,7 @@
 				40645399223629BC0061B130 /* ListVC.swift in Sources */,
 				40645385223621ED0061B130 /* AppDelegate.swift in Sources */,
 				4064539B223634B80061B130 /* PageVC.swift in Sources */,
+				402D539622483FC300E3E968 /* TimeInterval+format.swift in Sources */,
 				40645397223624FC0061B130 /* DetailVC.swift in Sources */,
 				402D539222482D6900E3E968 /* TableViewCell.swift in Sources */,
 				406453C1223EEA7A0061B130 /* Constants.swift in Sources */,

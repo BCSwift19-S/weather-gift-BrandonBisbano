@@ -8,6 +8,13 @@
 
 import UIKit
 
+private let dateFormatter: DateFormatter = {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEEE, MMMM dd, y"
+    print("***** DateFormatter Just Created in TableViewCell.swift")
+    return dateFormatter
+}()
+
 class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var dayCellIcon: UIImageView!
@@ -29,11 +36,10 @@ class TableViewCell: UITableViewCell {
         dayCellMaxTemp.text = String(format: "%2.f", dailyForecast.dailyMaxTemp) + "°"
         dayCellMinTemp.text = String(format: "%2.f", dailyForecast.dailyMinTemp) + "°"
         dayCellSummary.text = dailyForecast.dailySummary
-        let usableDate = Date(timeIntervalSince1970: dailyForecast.dailyDate)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE, MMMM dd, y"
-        dateFormatter.timeZone = TimeZone(identifier: timeZone)
-        let dateString = dateFormatter.string(from: usableDate)
+//        let usableDate = Date(timeIntervalSince1970: dailyForecast.dailyDate)
+//        dateFormatter.timeZone = TimeZone(identifier: timeZone)
+//        let dateString = dateFormatter.string(from: usableDate)
+        let dateString = dailyForecast.dailyDate.format(timeZone: timeZone, dateFormatter: dateFormatter)
         dayCellDate.text = dateString
     }
 
