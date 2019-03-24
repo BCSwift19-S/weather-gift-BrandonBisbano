@@ -11,11 +11,24 @@ import Alamofire
 import SwiftyJSON
 
 class WeatherLocation {
+    
+    struct DailyForecast {
+        var dailyMaxTemp: Double
+        var dailyMinTemp: Double
+        var dailySummary: String
+        var dailyDate: Double
+        var dailyIcon: String
+    }
+    
     var name = ""
     var coordinates = ""
     var currentTemperature = "--"
     var currentSummary = ""
     var currentIcon = ""
+    var currentTime = 0.0
+    var timeZone = ""
+    
+    var dailyForecastArray = [DailyForecast]()
     
     func getWeather(completed: @escaping () -> ()) {
         let alamoURL = urlBase + urlAPIKey + coordinates
@@ -40,6 +53,30 @@ class WeatherLocation {
                     self.currentIcon = icon
                 } else {
                     print("Could not return an icon.")
+                }
+                if let timeZone = json["timezone"].string {
+                    print("TIMEZONE for \(self.name) is \(timeZone)")
+                    self.timeZone = timeZone
+                } else {
+                    print("Could not return a timeZone.")
+                }
+                if let time = json["currently"]["time"].double {
+                    print("TIME for \(self.name) is \(time)")
+                    self.currentTime = time
+                } else {
+                    print("Could not return a time.")
+                }
+                let dailyDataArray = json["daily"]["data"]
+                print("***** the dailyDataArray is \(dailyDataArray)")
+                self.dailyForecastArray = []
+                for day in 1...dailyDataArray.count-1 {
+                    let maxTemp = json["daily"]["data"][day]["temperatureHigh"].doubleValue
+                    let minTemp = json["daily"]["data"][day]["temperatureLow"].doubleValue
+                    let dateValue = json["daily"]["data"][day]["time"].doubleValue
+                    let dateSummary = json["daily"]["data"][day]["summary"].stringValue
+                    let icon = json["daily"]["data"][day]["icon"].stringValue
+                    let newDailyForecast = DailyForecast(dailyMaxTemp: maxTemp, dailyMinTemp: minTemp, dailySummary: dateSummary, dailyDate: dateValue, dailyIcon: icon)
+                    self.dailyForecastArray.append(newDailyForecast)
                 }
             case .failure(let error):
                 print(error)
