@@ -23,7 +23,7 @@ class PageVC: UIPageViewController {
         delegate = self
         dataSource = self
         
-        var newLocation = WeatherLocation()
+        let newLocation = WeatherLocation()
         newLocation.name = ""
         locationsArray.append(newLocation)
         
